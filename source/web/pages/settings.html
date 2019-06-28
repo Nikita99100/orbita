@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>settings</title>
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/settings_s.css">
+    <script src="js/prof_settings_script.js"></script>
+    <script src="../components/jquery.min.js"></script>
+</head>
+<body>
+<div class = "header_text">
+    <text>Настройки профиля</text>
+</div>
+<div id="prof_edit" class="content">
+    <div id="avatar">
+
+    </div>
+    <table align="center" >
+        <tr>
+            <td>
+                Имя
+            </td>
+            <td>
+                <input type="text" id = "YourName" onchange="changeAvatar()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Фамилия
+            </td>
+            <td>
+                <input type="text" id = "SecondName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Отчество
+            </td>
+            <td>
+                <input type="text" id="DadName">
+            </td>
+        </tr>
+    </table>
+
+    <table align="center" >
+        <tr>
+            <td>
+                Дата рождения
+            </td>
+            <td>
+                <input type="date" id = "BirthDate"   >
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Страна
+            </td>
+            <td>
+                <input type="text" id = "Country">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Город
+            </td>
+            <td>
+                <input type="text" id="City">
+            </td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                <input type="text" id = "YourMail"  >
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Телефон
+            </td>
+            <td>
+                <input type="text" id = "YourTel">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Пароль
+            </td>
+            <td>
+                <input type="password" id="YourPass">
+            </td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td>
+                Выбор языка
+            </td>
+            <td>
+                <select>
+                    <option>Русский</option>
+                    <option>English</option>
+                </select>
+
+            </td>
+        </tr>
+    </table>
+    <button onclick="location.href='auth.html'">выход</button>
+</div>
+<script>
+    fillData('dorosh');
+</script>
+</body>
+</html>

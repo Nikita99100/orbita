@@ -1,0 +1,53 @@
+#prof_edit
+{
+    top:6px;
+}
+#auth
+{
+
+}
+#prof_edit table
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000000;
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    background-color: rgba(143, 134, 197, 0.86);
+}
+#prof_edit input
+{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.66);
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+
+}
+#prof_edit button
+{
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: rgba(255,255,255, 0.86);
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    outline: 0;
+}
+#avatar
+{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    width:80px;
+    height:80px;
+    font-size: 40px;
+    border-radius: 100%;
+    background-color: rgba(143, 134, 197, 0.86);
+    color:white;
+    text-anchor: middle;
+}

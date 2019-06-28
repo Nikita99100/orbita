@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "style/general.css">
+    <link rel = "stylesheet" href = "style/booking_room_s.css">
+    <link rel = "stylesheet" href = "style/rooms_s.css">
+    <script src="js/room_script.js"></script>
+    <title>booking</title>
+    <script src="../components/moment.min.js"></script>
+    <script src="../components/jquery.min.js"></script>
+    <script src="../components/daterangepicker.min.js"></script>
+    <link rel="stylesheet" href="../components/daterangepicker.css">
+
+</head>
+<body>
+    <div class = "header_text">
+        <text>Бронирование</text>
+    </div>
+    <div class="content">
+        <img src="../img/logo.png" id="logo_img">
+        <p style = "font-size: 20px; font-weight: bold;">Поиск номера в гостинице<br>«Орбита»</p>
+
+        <button name = "zaezd" class="calendar_button">
+
+            <snap style = "color: #7c7c7c; font-size: 14px">Заезд</snap><br>
+            <snap id="arrival_date">21 июня</snap>
+        </button>
+        <button name = "viezd" class="calendar_button">
+            <snap style = "color: #7c7c7c; font-size: 14px">Выезд</snap><br>
+            <snap id = "departure_date">22 июня</snap>
+        </button>
+        <br>
+        <br>
+        <select style="font-size:16px;  outline: 0;">
+            <option>1 гость</option>
+            <option>2 гостя</option>
+            <option>3 гостя</option>
+            <option>4 гостя</option>
+        </select>
+        <br>
+        <br>
+        <button id = "find_button" onclick="openRoomList()">
+            Найти
+        </button>
+
+        <div id = "big_block">
+           <p>Доступные номера категорий:</p>
+            <div class="info_block">
+                <b class="categ_name">Люкс</b><hr>
+
+                <p><span class = "price">от 6450₽</span><br>1-4 чел., 34м<sup>2</sup></sup></p>
+                <img src="../img/rooms/lux.jpg">
+                <button>Забронировать</button>
+            </div>
+            <div class="info_block">
+                <b class="categ_name">Двухкомнатный cтандарт</b><hr>
+
+                <p><span class = "price">от 6050₽</span><br>1-3 чел., 34м<sup>2</sup></p>
+                <img src="../img/rooms/dblstand.jpg">
+                <button>Забронировать</button>
+            </div>
+            <div class="info_block">
+                <b class="categ_name">Стандарт улучшенный</b><hr>
+
+                <p><span class = "price">от 5650₽</span><br>1-2 чел., 22м<sup>2</sup></p>
+                <img src="../img/rooms/ustand.jpg">
+                <button>Забронировать</button>
+            </div>
+            <div class="info_block">
+                <b class="categ_name">Стандарт</b><hr>
+                <p><span class = "price">от 5350₽</span><br>1-3 чел., 20м<sup>2</sup></p>
+                <img src="../img/rooms/stand.jpg">
+                <button>Забронировать</button>
+            </div>
+            <div class="info_block">
+                <b class="categ_name">Эконом</b><hr>
+
+                <p><span class = "price">от 4550₽</span><br>1-3 чел., 18м<sup>2</sup></p>
+                <img src="../img/rooms/econom.jpg">
+                <button>Забронировать</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        datenow = getFDate();
+        datemax = getMaxDate();
+        $(function() {
+            $('button[name="zaezd"]').daterangepicker({
+                "locale": {
+                    "format": "MM/DD/YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Apply",
+                    "cancelLabel": "Cancel",
+                    "fromLabel": "From",
+                    "toLabel": "To",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "Вс",
+                        "Пн",
+                        "Вт",
+                        "Cр",
+                        "Чт",
+                        "Пт",
+                        "Сб"
+                    ],
+                    "monthNames": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Май",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "firstDay": 1
+                },
+                "singleDatePicker": true,
+                "startDate": datenow,
+                "minDate": datenow,
+                "maxDate": datemax,
+            }, function(start) {
+                var selected_date = start.format("YY-MM-DD").split('-');
+                document.getElementById('arrival_date').innerHTML = selected_date[2]+" "+month_list[parseInt(selected_date[1])-1];
+            });
+        });
+        $(function() {
+            $('button[name="viezd"]').daterangepicker({
+                "locale": {
+                    "format": "MM/DD/YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Apply",
+                    "cancelLabel": "Cancel",
+                    "fromLabel": "From",
+                    "toLabel": "To",
+                    "customRangeLabel": "Custom",
+                    "weekLabel": "W",
+                    "daysOfWeek": [
+                        "Вс",
+                        "Пн",
+                        "Вт",
+                        "Cр",
+                        "Чт",
+                        "Пт",
+                        "Сб"
+                    ],
+                    "monthNames": [
+                        "Январь",
+                        "Февраль",
+                        "Март",
+                        "Апрель",
+                        "Май",
+                        "Июнь",
+                        "Июль",
+                        "Август",
+                        "Сентябрь",
+                        "Октябрь",
+                        "Ноябрь",
+                        "Декабрь"
+                    ],
+                    "firstDay": 1
+                },
+                "singleDatePicker": true,
+                "startDate": datenow,
+                "minDate": datenow,
+                "maxDate": datemax,
+                "opens": "left",
+
+            }, function(start) {
+                var selected_date = start.format("YY-MM-DD").split('-');
+                document.getElementById('departure_date').innerHTML = selected_date[2]+" "+month_list[parseInt(selected_date[1])-1];
+
+            });
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+#logo_img{
+    position: relative;
+    width: 130px;
+    top:5px;
+}
+.info_block
+{
+    /*background-color: rgba(164, 126, 179, 0.80);*/
+    background-color: rgba(187, 164, 220, 0.85);
+    text-align: center;
+    padding-top:7px;
+    padding-bottom: 5px;
+    box-shadow: 0 0 10px #000000;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#photo_table
+{
+    width:100%;
+}
+
+#photo_table img
+{
+    height:100px;
+}
+#photo_gallery
+{
+    overflow: auto;
+}

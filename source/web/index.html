@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <script type="text/javascript" src="js/menu_change.js">
+
+        </script>
+        <link rel="stylesheet" href = "style/main.css">
+    <title>Document</title>
+    </head>
+    <body>
+
+    <!------------------------ОКНА------------------------------------------------------->
+        <iframe class = "mainWindow" id="iframe_main" src = "pages/main.html">
+
+        </iframe>
+        <iframe class = "mainWindow" id="iframe_chat" src = "pages/chat.html">
+
+        </iframe>
+        <iframe class = "mainWindow" id="iframe_disc" src = "pages/disc.html">
+
+        </iframe>
+        <iframe class = "mainWindow" id="iframe_settings" src = "pages/auth.html">
+
+        </iframe>
+        <iframe class = "mainWindow" id="iframe_rooms" src = "pages/booking_room.html">
+
+        </iframe>
+    <!--------------------------------------------------------------------------------->
+
+
+        <div class="menu" id="menu">
+           <table border = '0'>
+               <tr>
+            <td align="center" onclick = "home_f()">
+                    <img id = "home" style=" position: relative; top:-2px;" src = "img/icons/home_a.png">
+            </td>
+            <td align="center" onclick = "disc_f()">
+                    <img id = "discond" src="img/icons/discond.png">
+            </td>
+            <td align="center" onclick="bed_f()">
+                    <img id = "bed" style=" position: relative; top:-5px;" src="img/icons/bed.png">
+            </td>
+            <td align="center" onclick = "chat_f()">
+                    <img id = "chat" style=" position: relative; top:-1px;" src="img/icons/chat.png">
+            </td>
+            <td align="center" onclick = "sett_f()">
+                    <img id = "settings" src="img/icons/settings.png" style=" position: relative; top:-2px;">
+            </td>
+               </tr>
+           </table>
+        </div>
+
+    <script>
+        clearAll();
+        home_f();
+    </script>
+    </body>
+</html>

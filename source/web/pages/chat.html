@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "style/general.css">
+    <link rel = "stylesheet" href = "style/chat_s.css">
+    <script type="text/javascript" src="js/chat_script.js">
+
+    </script>
+
+    <title>chat</title>
+</head>
+<body>
+<div id = "stop_chat">
+    <div id="chat_authorization">
+        <p>Ваш номер: <input id = "room_number" type = "text"  maxlength="3" size="3"></p>
+        <button onclick="openAccess()">OK</button>
+    </div>
+</div>
+    <div class = "header_text">
+        <text>Чат c администратором</text>
+    </div>
+
+    <div id="chat_container">
+    </div>
+
+
+    <div class= "messageBox">
+        <table>
+            <tr>
+                <td >
+                    <input type = "text" id = "message_text" placeholder="введите сообщение">
+                </td>
+                <td style="width: 30px;">
+                    <input type="button" id = "submit_button" value=">>" onclick = add_message(document.getElementById("message_text").value)>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>

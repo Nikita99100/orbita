@@ -1,0 +1,24 @@
+#logo_img{
+    position: relative;
+    width: 130px;
+    top:5px;
+}
+.calendar_button
+{
+    width:100px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: white;
+    outline: 0;
+}
+#find_button
+{
+    width:100px;
+    height:50px;
+    font-size: 20px;
+    background: -webkit-linear-gradient(0deg, #8821ff, #ff78aa);
+    color:#fff;
+    border-radius: 10px;
+    outline: 0;
+}

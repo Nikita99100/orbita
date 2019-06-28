@@ -1,0 +1,55 @@
+#big_block
+{
+    position:relative;
+    margin-top:30px;
+    background-color: rgba(237, 224, 255, 0.85);
+    box-shadow: 0 0 10px #000000;
+    width:95vw;
+    text-align: center;
+    padding-top:7px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: none;
+}
+.info_block .price
+{
+    font-size: 20px;
+
+}
+.info_block
+{
+    background-color: rgba(176, 160, 208, 0.89);
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    padding-top:7px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+   /* box-shadow: 0 0 10px #000000;*/
+}
+.info_block img
+{
+    width:95%;
+    border-radius: 10px;
+}
+.info_block p
+{
+    padding-top: -10px;
+    padding-bottom: -50px;
+}
+.info_block button
+{
+    margin-top: 5px;
+    background-color: rgb(135, 105, 136);
+    padding: 5px 10px;
+    color:white;
+    margin-left: calc(100% - 150px);
+    border-radius:10px ;
+    outline: 0;
+}
+.info_block .categ_name
+{
+    font-size: 20px;
+}

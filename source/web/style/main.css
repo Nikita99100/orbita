@@ -1,0 +1,43 @@
+body
+{
+/*background-color: #c7dbc2;*/
+    background-image: url("../img/backgrounds/petropavlo.jpg");
+    background-position: bottom;
+    background-size: 100vw auto;
+}
+
+.menu table{
+    position:relative;
+    width:100vw;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.menu
+{
+    position:fixed;
+    top:100%;
+    left:-1px;
+    width:100%;
+    transform: translateY(-100%);
+    background-color: #eee;
+    height: 40px;
+    border-style:solid;
+    border-color: #000;
+    border-width: 1px;
+}
+
+.menu img{
+    width:25px;
+    height: 25px;
+    margin-top:6px;
+}
+.mainWindow
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:calc(100vh - 40px);
+    border-style: hidden;
+}

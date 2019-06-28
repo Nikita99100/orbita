@@ -1,0 +1,25 @@
+.enter_button
+{
+    width:100px;
+    height:35px;
+    font-size: 18px;
+    background: -webkit-linear-gradient(0deg, #8821ff, #ff78aa);
+    color:#fff;
+    border-radius: 10px;
+    outline: 0;
+}
+
+#auth_mail
+{
+    padding: 6px 10px;
+    border-radius: 15px;
+    outline: 0;
+}
+#auth_pass
+{
+    padding: 6px 10px;
+    border-radius: 15px;
+    outline: 0;
+}
+
+
